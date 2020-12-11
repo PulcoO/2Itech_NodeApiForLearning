@@ -4,8 +4,7 @@ simple node.js Api :
 
 ## Install : 
 
-run : 
-      npm i
+run   npm i
 
 ## Cheack your database : 
 

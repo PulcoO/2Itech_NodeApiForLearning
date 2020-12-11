@@ -1,4 +1,9 @@
 // entry point
+
+//use dotenv
+const dotenv = require('dotenv');
+dotenv.config();
+
 //IMPORT
 const express = require('express');
 const app = express();
@@ -7,21 +12,19 @@ const bodyparser = require('body-parser');
 
 //IMPORT MONGOOSE
 const mongoose = require('mongoose')
-//DB CONFIG
-const dbConfig = require('./config/db.config');
 
 //configuration des routes
 const userRoute = require('./src/routes/user.route');
 const postRoute = require('./src/routes/post.route');
-
 
 //configuration de body-parser qui va utiliser les requests en json
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json())
 
 //--------------connection mongoose
+
 mongoose.connect(
-    `mongodb+srv://${dbConfig.HOST}:${dbConfig.MDP}@clusterfree.ui4mf.mongodb.net/${dbConfig.DB}?retryWrites=true&w=majority`, 
+    `${process.env.DATABASE_CONNECTION_STRING}`, 
     {
     useNewUrlParser:true,
     useUnifiedTopology:true

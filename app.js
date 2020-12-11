@@ -8,7 +8,7 @@ const bodyparser = require('body-parser');
 //IMPORT MONGOOSE
 const mongoose = require('mongoose')
 //DB CONFIG
-const dbConfig = require('./src/config/db.config');
+const dbConfig = require('./config/db.config');
 
 //configuration des routes
 const userRoute = require('./src/routes/user.route');

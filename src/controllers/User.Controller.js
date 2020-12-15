@@ -64,7 +64,8 @@ module.exports = {
         //console.log('users : ', users);
         res.status(200).json(users.posts);
     },
-
+    //--------------POST users/:userId/posts
+    // A faire : utiliser la fonction populate ! 
     create_userPost : async (req, res, next) => {
         const {userId} = req.params;
         //create the new post

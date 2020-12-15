@@ -15,7 +15,7 @@ router.route('/:userId')
     .put(USERController.replace_userById)
     .delete(USERController.delete_userByID)
     .patch(USERController.update_userByID)
-
+//------------/users/:userId/posts
 router.route('/:userId/posts')
     .get(USERController.get_userPosts)
     .post(USERController.create_userPost)

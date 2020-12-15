@@ -13,7 +13,7 @@ const User = mongoose.model('User',
                 required: 'Enter a Lastname please'
             },
             email: String,
-            compagny: String,
+            company: String,
             phone: Number,
             message: String,
             posts:[
